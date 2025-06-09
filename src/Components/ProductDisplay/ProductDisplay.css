@@ -1,0 +1,218 @@
+/* Container */
+.productDisplay {
+  display: flex;
+  gap: 60px;
+  padding: 50px 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+/* Left side - images */
+.productdisplay-left {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Thumbnails */
+.productdisplay-img-list {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.productdisplay-img-list img {
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.productdisplay-img-list img:hover {
+  border-color: #ff4d6d;
+  transform: scale(1.05);
+}
+
+/* Main product image */
+.productdisplay-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.productdisplay-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.productdisplay-main-img:hover {
+  transform: scale(1.05);
+}
+
+/* Right side - product details */
+.productdisplay-right {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Product title */
+.productdisplay-right h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Stars & reviews */
+.productdisplay-right-stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.productdisplay-right-stars img {
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.15));
+}
+
+.productdisplay-right-stars p {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Prices */
+.productdisplay-right-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.productdisplay-right-price-old {
+  color: #b0b0b0;
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.productdisplay-right-price-new {
+  color: #ff3b57;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+.productdisplay-right-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Size selector */
+.productdisplay-right-size h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.productdisplay-right-size > div {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.productdisplay-right-size div div {
+  padding: 10px 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.productdisplay-right-size div div:hover {
+  border-color: #ff4d6d;
+  color: red;
+  background-color: #fff0f3;
+  box-shadow: 0 2px 8px rgba(255, 77, 109, 0.2);
+}
+
+/* Add to cart button */
+button {
+  margin-top: 35px;
+  padding: 14px 40px;
+  background-color: #ff4d6d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #e63350;
+  box-shadow: 0 8px 25px rgba(230, 51, 80, 0.6);
+}
+
+/* Category & tags */
+.productdisplay-right-category {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.productdisplay-right-category span {
+  font-weight: 700;
+  color: #222;
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .productDisplay {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .productdisplay-left,
+  .productdisplay-right {
+    min-width: 100%;
+  }
+
+  .productdisplay-img-list {
+    justify-content: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px 0;
+  }
+}
